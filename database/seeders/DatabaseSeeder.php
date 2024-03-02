@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\TrainingSession;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,10 +16,21 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->call(PermissionsSeeder::class);
+        $this->call(CitiesSeeder::class);
+        $this->call(GymsSeeder::class);
+        $this->call(AdminSeeder::class);
+        $this->call(CitiesManagerSeeder::class);
+        $this->call(GymsManagerSeeder::class);
+        $this->call(CoachesSeeder::class);
+        $this->call(UsersSeeder::class);
+        $this->call(TrainingPackagesSeeder::class);
+        $this->call(RevenueSeeder::class);
+        $this->call(TrainingSessionSeeder::class);
+        $this->call(AttendanceSeeder::class);
+        $this->call(TrainingSessionUserSeeder::class);
+        $this->call(GymsTrainingPackagesSeeder::class);
+        $this->call(UpdateCityManagerIDSeeder::class);
+        $this->call(AddNewEmailTOUSer::class);
     }
 }
