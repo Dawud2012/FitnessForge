@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     Gym System
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,7 +38,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                    <li class="nav-item" style="display:flex;">
+                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                        <a class="nav-link" href="{{ route('about') }}">{{ __('About Us') }}</a>
+                        <a class="nav-link" href="{{ route('offer') }}">{{ __('What We Offer') }}</a>
+                        <a class="nav-link" href="{{ route('training-package') }}">{{ __('Training Packages') }}</a>
+                        <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>
+                    </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

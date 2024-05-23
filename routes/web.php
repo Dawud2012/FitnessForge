@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\TrainingPackagesController;
 use App\Http\Controllers\AttendanceController;
-
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\OfferController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GymTrainingPackage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +30,12 @@ use App\Http\Controllers\AttendanceController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/home', [IndexController::class, 'index'])->name('home');
+Route::get('/about', [AboutController::class, 'about'])->name('about');
+Route::get('/what-we-offer', [OfferController::class, 'offer'])->name('offer');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+Route::get('/training-package', [GymTrainingPackage::class, 'gym_training'])->name('training-package');
+
 #=======================================================================================#
 #			                           Home Route                               	    #
 #=======================================================================================#

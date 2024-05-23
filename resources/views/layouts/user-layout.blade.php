@@ -60,13 +60,13 @@ body {
 </style>
 @yield('stripeStyle')
 
-<body class="sidebar-collapse">
+<body>
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
         <img class="animation__shake" src="imgs/gym-icon.png" alt="GymSystemLogo" height="150" width="150">
     </div>
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="font-size: 14px;">
+    <nav class="main-header navbar navbar-expand navbar-dark navbar-light" style="font-size: 14px;">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             @role('admin|cityManager|gymManager')
